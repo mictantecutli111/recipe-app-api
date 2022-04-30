@@ -18,4 +18,4 @@
           - name: Test
             run: docker-compose up -d && docker-compose run --rm app sh -c "python manage.py test"
           - name: Lint
-            run: docker-compose run --rm app sh -c "flake8"
+            run: docker-compose run --rm app sh -c "flake8 --exclude ./app/settings.py"
